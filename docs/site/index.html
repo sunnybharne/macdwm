@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="A minimal macOS tiling window manager inspired by dwm" /><meta name="author" content="sunnybharne" /><link rel="canonical" href="https://sunnybharne.github.io/macdwm/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>macdwm</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/macdwm/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> macdwm
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-this-thing">What is this thing?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#features-that-matter">Features that matter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-start-for-impatient-people">Quick start (for impatient people)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hotkeys">Hotkeys</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#window-tiling">Window tiling</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#app-launcher">App launcher</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pre-built-binary-recommended">Pre-built binary (recommended)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#build-from-source-for-masochists">Build from source (for masochists)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#philosophy">Philosophy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#links">Links</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="user-guide/">User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="releases/">Releases</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">macdwm</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/sunnybharne/macdwm/edit/master/docs/index.md">Edit on sunnybharne/macdwm</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="macdwm">macdwm<a class="headerlink" href="#macdwm" title="Permanent link">&para;</a></h1>
+<p>A minimal macOS tiling window manager. Because dragging windows around is for peasants.</p>
+<h2 id="what-is-this-thing">What is this thing?<a class="headerlink" href="#what-is-this-thing" title="Permanent link">&para;</a></h2>
+<p>macdwm is a window manager for macOS that actually makes sense. Inspired by dwm (Dynamic Window Manager), it brings the efficiency of keyboard-driven window management to macOS without the usual bloat.</p>
+<p>If you're still using Mission Control to manage windows, you're doing it wrong.</p>
+<h2 id="features-that-matter">Features that matter<a class="headerlink" href="#features-that-matter" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Window tiling</strong>: <code>Cmd+Ctrl+Left/Right</code> to tile windows. No more guessing.</li>
+<li><strong>App launcher</strong>: <code>Cmd+1-5</code> to switch between your most used apps. Because clicking is slow.</li>
+<li><strong>Menu bar indicator</strong>: Shows which app you're currently focused on. No more wondering.</li>
+<li><strong>Lightweight</strong>: Uses about 2MB of RAM. Your browser uses more for a single tab.</li>
+<li><strong>Accessibility-based</strong>: Uses macOS APIs properly, unlike most "window managers" that just move windows around.</li>
+</ul>
+<h2 id="quick-start-for-impatient-people">Quick start (for impatient people)<a class="headerlink" href="#quick-start-for-impatient-people" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Install with Homebrew: <code>brew tap sunnybharne/tap &amp;&amp; brew install macdwm</code></li>
+<li>Give it Accessibility permissions (System Settings → Privacy &amp; Security → Accessibility)</li>
+<li>Run it: <code>macdwm</code></li>
+<li>Look for the terminal icon in your menu bar</li>
+<li>Try <code>Cmd+Ctrl+Left</code> on a window. It should tile to the left half. If it doesn't, you probably didn't give it permissions.</li>
+</ol>
+<h2 id="hotkeys">Hotkeys<a class="headerlink" href="#hotkeys" title="Permanent link">&para;</a></h2>
+<h3 id="window-tiling">Window tiling<a class="headerlink" href="#window-tiling" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Cmd+Ctrl+Left</code></td>
+<td>Tiles window to left half</td>
+</tr>
+<tr>
+<td><code>Cmd+Ctrl+Right</code></td>
+<td>Tiles window to right half</td>
+</tr>
+</tbody>
+</table>
+<h3 id="app-launcher">App launcher<a class="headerlink" href="#app-launcher" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>App</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Cmd+1</code></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><code>Cmd+2</code></td>
+<td>iTerm</td>
+</tr>
+<tr>
+<td><code>Cmd+3</code></td>
+<td>Cursor</td>
+</tr>
+<tr>
+<td><code>Cmd+4</code></td>
+<td>VS Code</td>
+</tr>
+<tr>
+<td><code>Cmd+5</code></td>
+<td>Teams</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>macOS 13.0 (Ventura) or later. No, it won't work on older versions.</li>
+<li>Accessibility permissions. This is non-negotiable.</li>
+<li>Swift 6.1+ (if building from source)</li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="pre-built-binary-recommended">Pre-built binary (recommended)<a class="headerlink" href="#pre-built-binary-recommended" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>macdwm
+./macdwm
+</code></pre></div>
+
+<h3 id="build-from-source-for-masochists">Build from source (for masochists)<a class="headerlink" href="#build-from-source-for-masochists" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sunnybharne/macdwm.git
+<span class="nb">cd</span><span class="w"> </span>macdwm
+swift<span class="w"> </span>build<span class="w"> </span>--configuration<span class="w"> </span>release
+.build/release/macdwm
+</code></pre></div>
+
+<h2 id="philosophy">Philosophy<a class="headerlink" href="#philosophy" title="Permanent link">&para;</a></h2>
+<p>macdwm follows the Unix philosophy: do one thing and do it well. It doesn't try to be everything to everyone. It just manages windows efficiently.</p>
+<ul>
+<li><strong>Simple</strong>: No configuration files, no complex setup, no BS.</li>
+<li><strong>Fast</strong>: Keyboard-driven workflow for people who value their time.</li>
+<li><strong>Compatible</strong>: Works with existing macOS features instead of fighting them.</li>
+<li><strong>Minimal</strong>: Small, focused, and doesn't get in your way.</li>
+</ul>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/sunnybharne/macdwm">GitHub Repository</a></li>
+<li><a href="https://github.com/sunnybharne/macdwm/releases">Releases</a></li>
+<li><a href="https://github.com/sunnybharne/macdwm/issues">Issues</a> (if you find bugs, report them)</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="installation/" class="btn btn-neutral float-right" title="Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/sunnybharne/macdwm" class="fa fa-code-fork" style="color: #fcfcfc"> sunnybharne/macdwm</a>
+        </span>
+    
+    
+    
+      <span><a href="installation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-09-08 20:19:06.782257+00:00
+-->

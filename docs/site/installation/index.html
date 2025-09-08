@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="sunnybharne" /><link rel="canonical" href="https://sunnybharne.github.io/macdwm/installation/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Installation - macdwm</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation";
+        var mkdocs_page_input_path = "installation.md";
+        var mkdocs_page_url = "/macdwm/installation/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> macdwm
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-1-homebrew-the-easiest-way">Method 1: Homebrew (The easiest way)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#install-with-homebrew">Install with Homebrew</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#grant-permissions-this-is-important">Grant permissions (this is important)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#run-it">Run it</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-2-pre-built-binary-for-people-who-dont-use-homebrew">Method 2: Pre-built Binary (For people who don't use Homebrew)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#download">Download</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#make-it-executable">Make it executable</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#grant-permissions-this-is-important_1">Grant permissions (this is important)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#run-it_1">Run it</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-2-build-from-source-for-people-who-like-pain">Method 2: Build from Source (For people who like pain)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#install-xcode-command-line-tools">Install Xcode Command Line Tools</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clone-the-repository">Clone the repository</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#build-it">Build it</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-it">Install it</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#grant-permissions">Grant permissions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#verification">Verification</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#failed-to-create-event-tap">"Failed to create event tap"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#permission-denied">"Permission denied"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#icon-not-appearing">Icon not appearing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hotkeys-not-working">Hotkeys not working</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#uninstallation">Uninstallation</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../user-guide/">User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../releases/">Releases</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">macdwm</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/sunnybharne/macdwm/edit/master/docs/installation.md">Edit on sunnybharne/macdwm</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+<p>Installing macdwm is straightforward. If you can't figure this out, maybe you should stick to using Mission Control.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>macOS 13.0 (Ventura) or later. No exceptions.</li>
+<li>Administrator access (you'll need this for permissions)</li>
+</ul>
+<h2 id="method-1-homebrew-the-easiest-way">Method 1: Homebrew (The easiest way)<a class="headerlink" href="#method-1-homebrew-the-easiest-way" title="Permanent link">&para;</a></h2>
+<h3 id="install-with-homebrew">Install with Homebrew<a class="headerlink" href="#install-with-homebrew" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>brew<span class="w"> </span>tap<span class="w"> </span>sunnybharne/tap
+brew<span class="w"> </span>install<span class="w"> </span>macdwm
+</code></pre></div>
+
+<h3 id="grant-permissions-this-is-important">Grant permissions (this is important)<a class="headerlink" href="#grant-permissions-this-is-important" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open System Settings → Privacy &amp; Security → Accessibility</li>
+<li>Click the + button</li>
+<li>Add your terminal application (Terminal, iTerm2, whatever you use)</li>
+<li>Make sure the toggle is enabled (it should be green)</li>
+</ol>
+<h3 id="run-it">Run it<a class="headerlink" href="#run-it" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>macdwm
+</code></pre></div>
+
+<p>You should see a terminal icon in your menu bar. If you don't, you probably messed up the permissions step.</p>
+<h2 id="method-2-pre-built-binary-for-people-who-dont-use-homebrew">Method 2: Pre-built Binary (For people who don't use Homebrew)<a class="headerlink" href="#method-2-pre-built-binary-for-people-who-dont-use-homebrew" title="Permanent link">&para;</a></h2>
+<h3 id="download">Download<a class="headerlink" href="#download" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to the <a href="https://github.com/sunnybharne/macdwm/releases">releases page</a></li>
+<li>Download the latest <code>macdwm</code> binary</li>
+<li>Put it somewhere sensible like <code>~/bin/</code> or <code>/usr/local/bin/</code></li>
+</ol>
+<h3 id="make-it-executable">Make it executable<a class="headerlink" href="#make-it-executable" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>macdwm
+</code></pre></div>
+
+<h3 id="grant-permissions-this-is-important_1">Grant permissions (this is important)<a class="headerlink" href="#grant-permissions-this-is-important_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open System Settings → Privacy &amp; Security → Accessibility</li>
+<li>Click the + button</li>
+<li>Add your terminal application (Terminal, iTerm2, whatever you use)</li>
+<li>Make sure the toggle is enabled (it should be green)</li>
+</ol>
+<h3 id="run-it_1">Run it<a class="headerlink" href="#run-it_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>./macdwm
+</code></pre></div>
+
+<p>You should see a terminal icon in your menu bar. If you don't, you probably messed up the permissions step.</p>
+<h2 id="method-2-build-from-source-for-people-who-like-pain">Method 2: Build from Source (For people who like pain)<a class="headerlink" href="#method-2-build-from-source-for-people-who-like-pain" title="Permanent link">&para;</a></h2>
+<h3 id="install-xcode-command-line-tools">Install Xcode Command Line Tools<a class="headerlink" href="#install-xcode-command-line-tools" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>xcode-select<span class="w"> </span>--install
+</code></pre></div>
+
+<h3 id="clone-the-repository">Clone the repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sunnybharne/macdwm.git
+<span class="nb">cd</span><span class="w"> </span>macdwm
+</code></pre></div>
+
+<h3 id="build-it">Build it<a class="headerlink" href="#build-it" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>swift<span class="w"> </span>build<span class="w"> </span>--configuration<span class="w"> </span>release
+</code></pre></div>
+
+<h3 id="install-it">Install it<a class="headerlink" href="#install-it" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>cp<span class="w"> </span>.build/release/macdwm<span class="w"> </span>/usr/local/bin/
+</code></pre></div>
+
+<h3 id="grant-permissions">Grant permissions<a class="headerlink" href="#grant-permissions" title="Permanent link">&para;</a></h3>
+<p>Same as Method 1. This step is not optional.</p>
+<h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
+<p>After installation, verify it's working:</p>
+<ol>
+<li><strong>Check menu bar</strong>: Look for a terminal icon</li>
+<li><strong>Test hotkeys</strong>: Try <code>Cmd+Ctrl+Left</code> on a window</li>
+<li><strong>Check menu</strong>: Click the menu bar icon to see options</li>
+</ol>
+<p>If any of these don't work, you probably didn't give it permissions.</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="failed-to-create-event-tap">"Failed to create event tap"<a class="headerlink" href="#failed-to-create-event-tap" title="Permanent link">&para;</a></h3>
+<p>This means you didn't give it Accessibility permissions. Go back to the permissions step and actually do it this time.</p>
+<h3 id="permission-denied">"Permission denied"<a class="headerlink" href="#permission-denied" title="Permanent link">&para;</a></h3>
+<p>The binary isn't executable. Run <code>chmod +x macdwm</code>.</p>
+<h3 id="icon-not-appearing">Icon not appearing<a class="headerlink" href="#icon-not-appearing" title="Permanent link">&para;</a></h3>
+<p>Check if the process is running: <code>ps aux | grep macdwm</code>. If it's not running, check the console for error messages.</p>
+<h3 id="hotkeys-not-working">Hotkeys not working<a class="headerlink" href="#hotkeys-not-working" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Make sure the app is enabled (check the menu bar icon)</li>
+<li>Verify no other apps are stealing your hotkeys</li>
+<li>Test with different applications</li>
+</ul>
+<h2 id="uninstallation">Uninstallation<a class="headerlink" href="#uninstallation" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Click the menu bar icon → Quit</li>
+<li>Delete the macdwm binary</li>
+<li>Remove it from Accessibility permissions (optional, but clean)</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../user-guide/" class="btn btn-neutral float-right" title="User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/sunnybharne/macdwm" class="fa fa-code-fork" style="color: #fcfcfc"> sunnybharne/macdwm</a>
+        </span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../user-guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

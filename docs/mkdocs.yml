@@ -8,7 +8,7 @@ repo_name: sunnybharne/macdwm
 docs_dir: docs-content
 
 theme:
-  name: slate
+  name: readthedocs
 
 nav:
   - Home: index.md
