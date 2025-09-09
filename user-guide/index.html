@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="sunnybharne">
+        <link rel="canonical" href="https://sunnybharne.github.io/macdwm/user-guide/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>User Guide - macdwm</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/darcula.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">macdwm</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">User Guide</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../releases/" class="nav-link">Releases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../troubleshooting/" class="nav-link">Troubleshooting</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../installation/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../releases/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/sunnybharne/macdwm/edit/master/docs/user-guide.md" class="nav-link">Edit on sunnybharne/macdwm
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#user-guide" class="nav-link">User Guide</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#getting-started" class="nav-link">Getting Started</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#window-tiling" class="nav-link">Window Tiling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#app-launcher" class="nav-link">App Launcher</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#advanced-usage" class="nav-link">Advanced Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#best-practices" class="nav-link">Best Practices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#common-mistakes" class="nav-link">Common Mistakes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#tips-and-tricks" class="nav-link">Tips and Tricks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="user-guide">User Guide<a class="headerlink" href="#user-guide" title="Permanent link">&para;</a></h1>
+<p>Complete guide to using macdwm. Read this if you want to actually understand what you're doing.</p>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<h3 id="first-launch">First Launch<a class="headerlink" href="#first-launch" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Run macdwm for the first time</li>
+<li>Look for the terminal icon in your menu bar</li>
+<li>Click the icon to access the menu</li>
+<li>Make sure "Enabled" is checked (it should be by default)</li>
+</ol>
+<h3 id="manual-control">Manual Control<a class="headerlink" href="#manual-control" title="Permanent link">&para;</a></h3>
+<p>If you prefer to run macdwm manually:</p>
+<pre class="codehilite"><code class="language-bash"># Start macdwm
+macdwm
+
+# Or from the project directory
+.build/release/macdwm
+</code></pre>
+
+<h3 id="menu-bar-controls">Menu Bar Controls<a class="headerlink" href="#menu-bar-controls" title="Permanent link">&para;</a></h3>
+<p>The menu bar icon gives you access to all macdwm features:</p>
+<ul>
+<li><strong>Enabled/Disabled</strong>: Toggle to start/stop hotkey functionality</li>
+<li><strong>Settings</strong>: View current hotkey configuration</li>
+<li><strong>About</strong>: Display version information</li>
+<li><strong>Quit</strong>: Exit the application</li>
+</ul>
+<h2 id="window-tiling">Window Tiling<a class="headerlink" href="#window-tiling" title="Permanent link">&para;</a></h2>
+<h3 id="basic-tiling">Basic Tiling<a class="headerlink" href="#basic-tiling" title="Permanent link">&para;</a></h3>
+<p>macdwm provides two main tiling operations:</p>
+<ul>
+<li><strong>Left Half</strong>: <code>Option+Ctrl+Left</code> - Tiles the focused window to the left half of the screen</li>
+<li><strong>Right Half</strong>: <code>Option+Ctrl+Right</code> - Tiles the focused window to the right half of the screen</li>
+</ul>
+<h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Focus any window (click on it or use Cmd+Tab)</li>
+<li>Press the tiling hotkey</li>
+<li>The window will resize and reposition to fill half the screen</li>
+<li>The window maintains its aspect ratio and content</li>
+</ol>
+<h3 id="supported-applications">Supported Applications<a class="headerlink" href="#supported-applications" title="Permanent link">&para;</a></h3>
+<p>Tiling works with most macOS applications including:
+- Web browsers (Safari, Chrome, Firefox)
+- Text editors (VS Code, Cursor, Xcode)
+- Terminal applications (Terminal, iTerm2)
+- System applications (Finder, System Settings)</p>
+<h2 id="app-launcher">App Launcher<a class="headerlink" href="#app-launcher" title="Permanent link">&para;</a></h2>
+<h3 id="quick-app-switching">Quick App Switching<a class="headerlink" href="#quick-app-switching" title="Permanent link">&para;</a></h3>
+<p>Use the app launcher hotkeys to instantly switch to or launch applications:</p>
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Application</th>
+<th>Bundle ID/Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Option+1</code></td>
+<td>Firefox</td>
+<td><code>org.mozilla.firefox</code></td>
+</tr>
+<tr>
+<td><code>Option+2</code></td>
+<td>iTerm</td>
+<td><code>com.googlecode.iterm2</code></td>
+</tr>
+<tr>
+<td><code>Option+3</code></td>
+<td>Cursor</td>
+<td><code>/Applications/Cursor.app</code></td>
+</tr>
+<tr>
+<td><code>Option+4</code></td>
+<td>VS Code</td>
+<td><code>/Applications/Visual Studio Code.app</code></td>
+</tr>
+<tr>
+<td><code>Option+5</code></td>
+<td>Teams</td>
+<td><code>com.microsoft.teams2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-app-launcher-works">How App Launcher Works<a class="headerlink" href="#how-app-launcher-works" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Press the hotkey for your desired application</li>
+<li>If the app is already running, it will be brought to the front</li>
+<li>If the app is not running, it will be launched</li>
+<li>The app window will be focused and ready to use</li>
+</ol>
+<h2 id="advanced-usage">Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permanent link">&para;</a></h2>
+<h3 id="combining-features">Combining Features<a class="headerlink" href="#combining-features" title="Permanent link">&para;</a></h3>
+<p>You can combine tiling and app launching for efficient workflows:</p>
+<ol>
+<li><strong>Split Screen Coding</strong>: </li>
+<li>Use <code>Option+3</code> to open Cursor</li>
+<li>Use <code>Option+Ctrl+Left</code> to tile it left</li>
+<li>Use <code>Option+2</code> to open iTerm</li>
+<li>
+<p>Use <code>Option+Ctrl+Right</code> to tile it right</p>
+</li>
+<li>
+<p><strong>Documentation + Browser</strong>:</p>
+</li>
+<li>Use <code>Option+1</code> to open Firefox</li>
+<li>Use <code>Option+Ctrl+Left</code> to tile it left</li>
+<li>Open documentation in another app</li>
+<li>Use <code>Option+Ctrl+Right</code> to tile it right</li>
+</ol>
+<h3 id="window-focus-management">Window Focus Management<a class="headerlink" href="#window-focus-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Always ensure the target window is focused before tiling</li>
+<li>Use Cmd+Tab to switch between applications</li>
+<li>Click on windows to focus them before using tiling hotkeys</li>
+</ul>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="workflow-optimization">Workflow Optimization<a class="headerlink" href="#workflow-optimization" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Consistent Setup</strong>: Use the same applications for the same hotkeys</li>
+<li><strong>Keyboard-First</strong>: Minimize mouse usage for better efficiency</li>
+<li><strong>Window Management</strong>: Keep frequently used apps in predictable positions</li>
+<li><strong>Regular Usage</strong>: The more you use the hotkeys, the more natural they become</li>
+</ol>
+<h3 id="system-integration">System Integration<a class="headerlink" href="#system-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>macdwm works alongside existing macOS features</li>
+<li>No conflicts with Mission Control or Spaces</li>
+<li>Compatible with other window management tools</li>
+<li>Respects system accessibility settings</li>
+</ul>
+<h2 id="common-mistakes">Common Mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
+<h3 id="not-focusing-windows">Not Focusing Windows<a class="headerlink" href="#not-focusing-windows" title="Permanent link">&para;</a></h3>
+<p>The most common mistake is trying to tile a window that isn't focused. Make sure you click on the window or use Cmd+Tab to focus it first.</p>
+<h3 id="permission-issues">Permission Issues<a class="headerlink" href="#permission-issues" title="Permanent link">&para;</a></h3>
+<p>If hotkeys aren't working, check that you've given macdwm Accessibility permissions. This is the most common cause of problems.</p>
+<h3 id="app-not-found">App Not Found<a class="headerlink" href="#app-not-found" title="Permanent link">&para;</a></h3>
+<p>If an app launcher hotkey doesn't work, the application might not be installed in the expected location. Check the bundle ID or path in the source code.</p>
+<h2 id="tips-and-tricks">Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Use the menu bar icon to quickly check if macdwm is enabled</li>
+<li>The app number in the menu bar shows which app you're currently focused on</li>
+<li>You can disable macdwm temporarily without quitting the application</li>
+<li>The settings dialog shows all available hotkeys for reference</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
