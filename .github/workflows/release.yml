@@ -65,8 +65,8 @@ jobs:
           A minimal macOS tiling window manager inspired by dwm.
           
           ### Features
-          - Window tiling with `Cmd+Ctrl+Left/Right`
-          - App launcher with `Cmd+1-5`
+          - Window tiling with `Option+Ctrl+Left/Right`
+          - App launcher with `Option+1-5`
           - Menu bar indicator
           - Auto-start functionality
           

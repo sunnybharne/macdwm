@@ -77,8 +77,8 @@ This is the easiest and most reliable method. No GitHub access required.
 ### Step 5: Test It Works
 
 1. **Click on any window** to focus it (like Finder, Safari, etc.)
-2. **Press `Cmd+Ctrl+Left`** - the window should tile to the left half
-3. **Press `Cmd+Ctrl+Right`** - the window should tile to the right half
+2. **Press `Option+Ctrl+Left`** - the window should tile to the left half
+3. **Press `Option+Ctrl+Right`** - the window should tile to the right half
 
 If the window tiles, congratulations! macdwm is working.
 
@@ -177,7 +177,7 @@ tail -f /tmp/macdwm.error.log
 After installation, verify it's working:
 
 1. **Check menu bar**: Look for a terminal icon
-2. **Test hotkeys**: Try `Cmd+Ctrl+Left` on a window
+2. **Test hotkeys**: Try `Option+Ctrl+Left` on a window
 3. **Check menu**: Click the menu bar icon to see options
 
 If any of these don't work, you probably didn't give it permissions.

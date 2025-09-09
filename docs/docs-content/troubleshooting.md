@@ -133,7 +133,7 @@ The keyboard shortcuts are not responding.
    - Look for conflicting shortcuts
 
 ### App launcher not working
-The Cmd+1-5 hotkeys are not launching applications.
+The Option+1-5 hotkeys are not launching applications.
 
 **Troubleshooting steps:**
 1. **Verify application paths:**

@@ -10,8 +10,8 @@ If you're still using Mission Control to manage windows, you're doing it wrong.
 
 ## Features that matter
 
-- **Window tiling**: `Cmd+Ctrl+Left/Right` to tile windows. No more guessing.
-- **App launcher**: `Cmd+1-5` to switch between your most used apps. Because clicking is slow.
+- **Window tiling**: `Option+Ctrl+Left/Right` to tile windows. No more guessing.
+- **App launcher**: `Option+1-5` to switch between your most used apps. Because clicking is slow.
 - **Menu bar indicator**: Shows which app you're currently focused on. No more wondering.
 - **Lightweight**: Uses about 2MB of RAM. Your browser uses more for a single tab.
 - **Accessibility-based**: Uses macOS APIs properly, unlike most "window managers" that just move windows around.
@@ -22,24 +22,24 @@ If you're still using Mission Control to manage windows, you're doing it wrong.
 2. Give it Accessibility permissions (System Settings → Privacy & Security → Accessibility)
 3. Run it: `./macdwm`
 4. Look for the terminal icon in your menu bar
-5. Try `Cmd+Ctrl+Left` on a window. It should tile to the left half. If it doesn't, you probably didn't give it permissions.
+5. Try `Option+Ctrl+Left` on a window. It should tile to the left half. If it doesn't, you probably didn't give it permissions.
 
 ## Hotkeys
 
 ### Window tiling
 | Hotkey | What it does |
 |--------|--------------|
-| `Cmd+Ctrl+Left` | Tiles window to left half |
-| `Cmd+Ctrl+Right` | Tiles window to right half |
+| `Option+Ctrl+Left` | Tiles window to left half |
+| `Option+Ctrl+Right` | Tiles window to right half |
 
 ### App launcher
 | Hotkey | App |
 |--------|-----|
-| `Cmd+1` | Firefox |
-| `Cmd+2` | iTerm |
-| `Cmd+3` | Cursor |
-| `Cmd+4` | VS Code |
-| `Cmd+5` | Teams |
+| `Option+1` | Firefox |
+| `Option+2` | iTerm |
+| `Option+3` | Cursor |
+| `Option+4` | VS Code |
+| `Option+5` | Teams |
 
 ## Requirements
 

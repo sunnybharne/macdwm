@@ -9,18 +9,18 @@ Download the latest version of macdwm or browse previous releases.
 
 #### Features
 - Basic window tiling (left/right halves)
-- App launcher hotkeys (Cmd+1-5)
+- App launcher hotkeys (Option+1-5)
 - Menu bar status indicator with app number tracking
 - Toggle on/off functionality
 - Settings and About dialogs
 
 #### Hotkeys
-- `Cmd+Ctrl+Left/Right`: Tile windows
-- `Cmd+1`: Firefox
-- `Cmd+2`: iTerm  
-- `Cmd+3`: Cursor
-- `Cmd+4`: VS Code
-- `Cmd+5`: Teams
+- `Option+Ctrl+Left/Right`: Tile windows
+- `Option+1`: Firefox
+- `Option+2`: iTerm  
+- `Option+3`: Cursor
+- `Option+4`: VS Code
+- `Option+5`: Teams
 
 #### Download
 - [macdwm v1.0.0](https://github.com/sunnybharne/macdwm/releases/download/v1.0.0/macdwm) - Universal binary
