@@ -10,24 +10,6 @@ Complete guide to using macdwm. Read this if you want to actually understand wha
 3. Click the icon to access the menu
 4. Make sure "Enabled" is checked (it should be by default)
 
-### Auto-Start Setup (Recommended)
-macdwm is designed to run automatically when you log in. To set this up:
-
-```bash
-# From the macdwm project directory
-./scripts/install-autostart.sh
-```
-
-This will:
-- Install macdwm to `/usr/local/bin/macdwm`
-- Set up automatic startup on login
-- Start macdwm immediately
-
-**Important**: After installation, you must grant Accessibility permissions:
-1. Open System Settings → Privacy & Security → Accessibility
-2. Click the + button and add `/usr/local/bin/macdwm`
-3. Ensure the toggle is enabled (green)
-
 ### Manual Control
 If you prefer to run macdwm manually:
 

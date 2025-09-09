@@ -43,17 +43,7 @@ A minimal macOS tiling window manager inspired by dwm (Dynamic Window Manager).
    - Look for a terminal icon in your menu bar
    - If you see it, macdwm is running!
 
-5. **Set up auto-start (optional):**
-   ```bash
-   # Clone the repository first
-   git clone https://github.com/sunnybharne/macdwm.git
-   cd macdwm
-   
-   # Set up auto-start
-   ./scripts/install-autostart.sh
-   ```
-
-6. **Test it:**
+5. **Test it:**
    - Click on any window to focus it
    - Press `Option+Ctrl+Left` - the window should tile to the left half
    - Press `Option+Ctrl+Right` - the window should tile to the right half

@@ -48,7 +48,7 @@ chmod +x macdwm
 
 **Alternative**: `brew tap sunnybharne/tap && brew install macdwm` (requires GitHub access)
 
-**Auto-start**: Run `./scripts/install-autostart.sh` from the project directory to start automatically on login.
+**Manual start**: Run `./macdwm` whenever you want to use the window manager.
 
 ## Hotkeys
 

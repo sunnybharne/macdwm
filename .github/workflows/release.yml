@@ -68,20 +68,13 @@ jobs:
           - Window tiling with `Option+Ctrl+Left/Right`
           - App launcher with `Option+1-5`
           - Menu bar indicator
-          - Auto-start functionality
+          - Manual start functionality
           
           ### Installation
           1. Download the `macdwm` binary
           2. `chmod +x macdwm`
           3. Grant Accessibility permissions in System Settings
           4. `./macdwm`
-          
-          ### Auto-start Setup
-          ```bash
-          git clone https://github.com/sunnybharne/macdwm.git
-          cd macdwm
-          ./scripts/install-autostart.sh
-          ```
         files: |
           release/macdwm
           release/macdwm-*.tar.gz

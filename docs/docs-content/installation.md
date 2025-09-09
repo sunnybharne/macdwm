@@ -128,50 +128,6 @@ cp .build/release/macdwm /usr/local/bin/
 ### Grant permissions
 Same as Method 1. This step is not optional.
 
-## Auto-Start (Because you want it running all the time)
-
-macdwm is designed to be always running. Here's how to make it start automatically when you log in:
-
-### Install Auto-Start
-```bash
-# From the project directory
-./scripts/install-autostart.sh
-```
-
-This will:
-- Install the binary to `/usr/local/bin/macdwm`
-- Set up a LaunchAgent to start macdwm on login
-- Start macdwm immediately
-
-### Uninstall Auto-Start
-```bash
-# From the project directory
-./scripts/uninstall-autostart.sh
-```
-
-### Manual Control
-You can also control the service manually:
-```bash
-# Start macdwm now
-launchctl start com.sunnybharne.macdwm
-
-# Stop macdwm
-launchctl stop com.sunnybharne.macdwm
-
-# Check if it's running
-launchctl list | grep macdwm
-```
-
-### Logs
-If something goes wrong, check the logs:
-```bash
-# View output log
-tail -f /tmp/macdwm.log
-
-# View error log
-tail -f /tmp/macdwm.error.log
-```
-
 ## Verification
 
 After installation, verify it's working:

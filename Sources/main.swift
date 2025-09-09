@@ -290,6 +290,26 @@ final class AppController: NSObject, NSApplicationDelegate {
     }
 }
 
+// Singleton check - prevent multiple instances
+let lockFile = FileManager.default.temporaryDirectory.appendingPathComponent("macdwm.lock")
+let lockFileURL = lockFile
+
+// Try to create lock file (exclusive creation)
+let lockFileHandle = try? FileHandle(forWritingTo: lockFileURL)
+if lockFileHandle == nil {
+    // Lock file doesn't exist, create it
+    FileManager.default.createFile(atPath: lockFileURL.path, contents: nil, attributes: nil)
+} else {
+    // Lock file exists, another instance is running
+    print("macdwm is already running. Exiting.")
+    exit(1)
+}
+
+// Clean up lock file on exit
+defer {
+    try? FileManager.default.removeItem(at: lockFileURL)
+}
+
 let app = NSApplication.shared
 app.setActivationPolicy(.accessory)
 let delegate = AppController()
