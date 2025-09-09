@@ -15,6 +15,8 @@ brew tap sunnybharne/tap
 brew install macdwm
 ```
 
+**Note**: If the tap command asks for GitHub authentication, you can skip it and use Method 2 (Pre-built Binary) instead. The tap is optional and only needed if you want to install via Homebrew.
+
 ### Grant permissions (this is important)
 1. Open System Settings → Privacy & Security → Accessibility
 2. Click the + button

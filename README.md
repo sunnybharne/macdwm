@@ -17,10 +17,13 @@ A minimal macOS tiling window manager inspired by dwm (Dynamic Window Manager).
 ## Quick Start
 
 1. **Download** from [Releases](https://github.com/sunnybharne/macdwm/releases)
-2. **Grant Permissions**: Enable Accessibility in System Settings
-3. **Run**: Execute the binary and look for the terminal icon in menu bar
-4. **Auto-Start**: Run `./scripts/install-autostart.sh` to start automatically on login
-5. **Use**: Try `Cmd+Ctrl+Left/Right` to tile windows
+2. **Make executable**: `chmod +x macdwm`
+3. **Grant Permissions**: Enable Accessibility in System Settings
+4. **Run**: Execute the binary and look for the terminal icon in menu bar
+5. **Auto-Start**: Run `./scripts/install-autostart.sh` to start automatically on login
+6. **Use**: Try `Cmd+Ctrl+Left/Right` to tile windows
+
+**Alternative**: Install with Homebrew: `brew tap sunnybharne/tap && brew install macdwm` (requires GitHub access)
 
 ## Hotkeys
 
@@ -42,7 +45,7 @@ A minimal macOS tiling window manager inspired by dwm (Dynamic Window Manager).
 chmod +x macdwm
 ./macdwm
 ```
-
+an
 ### Build from Source
 ```bash
 git clone https://github.com/sunnybharne/macdwm.git

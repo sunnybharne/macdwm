@@ -70,6 +70,26 @@ chmod +x macdwm
 ./macdwm
 ```
 
+### Homebrew tap asks for GitHub authentication
+When running `brew tap sunnybharne/tap`, it asks for GitHub login.
+
+**Why this happens:**
+- The tap repository doesn't exist yet on GitHub
+- Homebrew tries to clone it and needs authentication
+- Your company may restrict GitHub access
+
+**Solutions:**
+1. **Skip Homebrew** (recommended): Use the pre-built binary instead
+   ```bash
+   # Download from releases page
+   chmod +x macdwm
+   ./macdwm
+   ```
+
+2. **Use personal GitHub account**: If you have a personal GitHub account, you can authenticate with that
+
+3. **Wait for tap setup**: The tap will be set up later, then you can use Homebrew without authentication
+
 ## Runtime Issues
 
 ### Menu bar icon not appearing

@@ -18,11 +18,14 @@ If you're still using Mission Control to manage windows, you're doing it wrong.
 
 ## Quick start (for impatient people)
 
-1. Install with Homebrew: `brew tap sunnybharne/tap && brew install macdwm`
-2. Give it Accessibility permissions (System Settings → Privacy & Security → Accessibility)
-3. Set up auto-start: `./scripts/install-autostart.sh` (from project directory)
-4. Look for the terminal icon in your menu bar
-5. Try `Cmd+Ctrl+Left` on a window. It should tile to the left half. If it doesn't, you probably didn't give it permissions.
+1. Download the binary from [releases](https://github.com/sunnybharne/macdwm/releases)
+2. Make it executable: `chmod +x macdwm`
+3. Give it Accessibility permissions (System Settings → Privacy & Security → Accessibility)
+4. Set up auto-start: `./scripts/install-autostart.sh` (from project directory)
+5. Look for the terminal icon in your menu bar
+6. Try `Cmd+Ctrl+Left` on a window. It should tile to the left half. If it doesn't, you probably didn't give it permissions.
+
+**Alternative**: Install with Homebrew: `brew tap sunnybharne/tap && brew install macdwm` (requires GitHub access)
 
 **Note**: Auto-start is recommended because window managers should just be running all the time.
 
