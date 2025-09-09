@@ -19,7 +19,8 @@ A minimal macOS tiling window manager inspired by dwm (Dynamic Window Manager).
 1. **Download** from [Releases](https://github.com/sunnybharne/macdwm/releases)
 2. **Grant Permissions**: Enable Accessibility in System Settings
 3. **Run**: Execute the binary and look for the terminal icon in menu bar
-4. **Use**: Try `Cmd+Ctrl+Left/Right` to tile windows
+4. **Auto-Start**: Run `./scripts/install-autostart.sh` to start automatically on login
+5. **Use**: Try `Cmd+Ctrl+Left/Right` to tile windows
 
 ## Hotkeys
 

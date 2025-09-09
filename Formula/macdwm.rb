@@ -29,7 +29,11 @@ class Macdwm < Formula
       2. Click the + button and add your terminal application
       3. Ensure the toggle is enabled
       
-      Then run: macdwm
+      To run once: macdwm
+      
+      To auto-start on login:
+      1. Clone the repository: git clone https://github.com/sunnybharne/macdwm.git
+      2. Run: ./scripts/install-autostart.sh
     EOS
   end
 end
