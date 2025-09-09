@@ -90,35 +90,16 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
-    - name: Update Homebrew Formula
+    - name: Update Homebrew Formula (Manual)
       run: |
         VERSION="${{ steps.version.outputs.version }}"
         SHA256="${{ steps.sha256.outputs.sha256 }}"
         
-        # Clone the tap repository
-        git clone https://github.com/sunnybharne/tap.git homebrew-tap
-        cd homebrew-tap
-        
-        # Update the formula
-        echo "Current formula:"
-        cat Formula/macdwm.rb
-        
-        # Update URL and SHA256
-        sed -i '' "s|url \".*\"|url \"https://github.com/sunnybharne/macdwm/archive/${VERSION}.tar.gz\"|" Formula/macdwm.rb
-        sed -i '' "s|sha256 \".*\"|sha256 \"${SHA256}\"|" Formula/macdwm.rb
-        
-        # Verify the changes
-        echo "Updated formula:"
-        cat Formula/macdwm.rb
-        
-        # Commit and push
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add Formula/macdwm.rb
-        git commit -m "Update macdwm to ${VERSION}"
-        
-        # Use token authentication for push
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/sunnybharne/tap.git
-        git push origin main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        echo "Homebrew formula update requires manual setup:"
+        echo "1. Go to https://github.com/sunnybharne/tap"
+        echo "2. Edit Formula/macdwm.rb"
+        echo "3. Update url to: https://github.com/sunnybharne/macdwm/archive/${VERSION}.tar.gz"
+        echo "4. Update sha256 to: ${SHA256}"
+        echo "5. Commit and push the changes"
+        echo ""
+        echo "Or set up a Personal Access Token with repository access and add it as a secret."
