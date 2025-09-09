@@ -14,6 +14,53 @@ This error means macdwm can't create a global event tap, usually because you did
 4. Restart your terminal application
 5. Run macdwm again
 
+### Auto-Start Installation Issues
+
+#### "Permission denied" during install-autostart.sh
+The script needs sudo access to install the binary to `/usr/local/bin/`.
+
+**Solution:**
+- Enter your password when prompted
+- This is required to install the binary system-wide
+
+#### Auto-start not working after installation
+macdwm is installed but not starting automatically.
+
+**Troubleshooting steps:**
+1. **Check if LaunchAgent is loaded:**
+   ```bash
+   launchctl list | grep macdwm
+   ```
+
+2. **Check LaunchAgent file:**
+   ```bash
+   ls -la ~/Library/LaunchAgents/com.sunnybharne.macdwm.plist
+   ```
+
+3. **Manually load the LaunchAgent:**
+   ```bash
+   launchctl load ~/Library/LaunchAgents/com.sunnybharne.macdwm.plist
+   ```
+
+4. **Check logs:**
+   ```bash
+   tail -f /tmp/macdwm.log
+   tail -f /tmp/macdwm.error.log
+   ```
+
+#### "Failed to create event tap" with auto-start
+This happens when auto-start is working but Accessibility permissions aren't granted.
+
+**Solution:**
+1. Open System Settings → Privacy & Security → Accessibility
+2. Click the + button and add `/usr/local/bin/macdwm`
+3. Make sure the toggle is enabled (green)
+4. Restart the service:
+   ```bash
+   launchctl stop com.sunnybharne.macdwm
+   launchctl start com.sunnybharne.macdwm
+   ```
+
 ### "Permission denied" when running
 The binary doesn't have execute permissions.
 
@@ -103,6 +150,69 @@ Windows are not resizing or repositioning.
 3. **Check window properties:**
    - Some windows may be non-resizable
    - Try with a resizable window
+
+## Auto-Start Service Management
+
+### Controlling the Auto-Start Service
+
+#### Start/Stop the service
+```bash
+# Start macdwm now
+launchctl start com.sunnybharne.macdwm
+
+# Stop macdwm
+launchctl stop com.sunnybharne.macdwm
+
+# Check if it's running
+launchctl list | grep macdwm
+```
+
+#### Uninstall auto-start
+```bash
+# From the macdwm project directory
+./scripts/uninstall-autostart.sh
+```
+
+#### Check service status
+```bash
+# See all loaded services
+launchctl list | grep macdwm
+
+# Check if the plist file exists
+ls -la ~/Library/LaunchAgents/com.sunnybharne.macdwm.plist
+
+# View service logs
+tail -f /tmp/macdwm.log
+tail -f /tmp/macdwm.error.log
+```
+
+### Common Auto-Start Issues
+
+#### Service not starting on login
+1. **Check if the plist file exists:**
+   ```bash
+   ls -la ~/Library/LaunchAgents/com.sunnybharne.macdwm.plist
+   ```
+
+2. **Reload the service:**
+   ```bash
+   launchctl unload ~/Library/LaunchAgents/com.sunnybharne.macdwm.plist
+   launchctl load ~/Library/LaunchAgents/com.sunnybharne.macdwm.plist
+   ```
+
+3. **Check for errors in logs:**
+   ```bash
+   tail -20 /tmp/macdwm.error.log
+   ```
+
+#### Service keeps crashing
+1. **Check the error log:**
+   ```bash
+   tail -20 /tmp/macdwm.error.log
+   ```
+
+2. **Most common cause**: Missing Accessibility permissions
+3. **Solution**: Grant permissions to `/usr/local/bin/macdwm` in System Settings
 
 ## Getting Help
 

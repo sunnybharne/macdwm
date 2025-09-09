@@ -20,9 +20,11 @@ If you're still using Mission Control to manage windows, you're doing it wrong.
 
 1. Install with Homebrew: `brew tap sunnybharne/tap && brew install macdwm`
 2. Give it Accessibility permissions (System Settings → Privacy & Security → Accessibility)
-3. Run it: `macdwm`
+3. Set up auto-start: `./scripts/install-autostart.sh` (from project directory)
 4. Look for the terminal icon in your menu bar
 5. Try `Cmd+Ctrl+Left` on a window. It should tile to the left half. If it doesn't, you probably didn't give it permissions.
+
+**Note**: Auto-start is recommended because window managers should just be running all the time.
 
 ## Hotkeys
 
