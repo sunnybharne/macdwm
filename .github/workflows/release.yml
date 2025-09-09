@@ -100,8 +100,16 @@ jobs:
         cd homebrew-tap
         
         # Update the formula
+        echo "Current formula:"
+        cat Formula/macdwm.rb
+        
+        # Update URL and SHA256
         sed -i '' "s|url \".*\"|url \"https://github.com/sunnybharne/macdwm/archive/${VERSION}.tar.gz\"|" Formula/macdwm.rb
         sed -i '' "s|sha256 \".*\"|sha256 \"${SHA256}\"|" Formula/macdwm.rb
+        
+        # Verify the changes
+        echo "Updated formula:"
+        cat Formula/macdwm.rb
         
         # Commit and push
         git config user.name "github-actions[bot]"
