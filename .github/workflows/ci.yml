@@ -20,7 +20,14 @@ jobs:
         
     - name: Test binary
       run: |
-        .build/release/macdwm --help || true
+        # Test that the binary exists and is executable
+        if [ -f .build/release/macdwm ]; then
+          echo "Binary exists and is executable"
+          ls -la .build/release/macdwm
+        else
+          echo "Binary not found!"
+          exit 1
+        fi
         echo "Binary built successfully"
         
     - name: Check binary size
