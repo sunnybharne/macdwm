@@ -18,16 +18,37 @@ If you're still using Mission Control to manage windows, you're doing it wrong.
 
 ## Quick start (for impatient people)
 
-1. Download the binary from [releases](https://github.com/sunnybharne/macdwm/releases)
-2. Make it executable: `chmod +x macdwm`
-3. Give it Accessibility permissions (System Settings → Privacy & Security → Accessibility)
-4. Set up auto-start: `./scripts/install-autostart.sh` (from project directory)
-5. Look for the terminal icon in your menu bar
-6. Try `Cmd+Ctrl+Left` on a window. It should tile to the left half. If it doesn't, you probably didn't give it permissions.
+### Step 1: Download
+- Go to [releases](https://github.com/sunnybharne/macdwm/releases)
+- Download the latest `macdwm` binary
+- Save to your Downloads folder
 
-**Alternative**: Install with Homebrew: `brew tap sunnybharne/tap && brew install macdwm` (requires GitHub access)
+### Step 2: Make it executable
+```bash
+cd ~/Downloads
+chmod +x macdwm
+```
 
-**Note**: Auto-start is recommended because window managers should just be running all the time.
+### Step 3: Grant permissions
+- Open **System Settings** → **Privacy & Security** → **Accessibility**
+- Click **+** button and add the `macdwm` file from Downloads
+- Make sure the toggle is **enabled** (green)
+
+### Step 4: Run it
+```bash
+./macdwm
+```
+- Look for terminal icon in menu bar
+- If you see it, it's working!
+
+### Step 5: Test it
+- Click any window to focus it
+- Press `Cmd+Ctrl+Left` - window should tile left
+- Press `Cmd+Ctrl+Right` - window should tile right
+
+**Alternative**: `brew tap sunnybharne/tap && brew install macdwm` (requires GitHub access)
+
+**Auto-start**: Run `./scripts/install-autostart.sh` from the project directory to start automatically on login.
 
 ## Hotkeys
 

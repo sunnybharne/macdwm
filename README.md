@@ -16,14 +16,56 @@ A minimal macOS tiling window manager inspired by dwm (Dynamic Window Manager).
 
 ## Quick Start
 
-1. **Download** from [Releases](https://github.com/sunnybharne/macdwm/releases)
-2. **Make executable**: `chmod +x macdwm`
-3. **Grant Permissions**: Enable Accessibility in System Settings
-4. **Run**: Execute the binary and look for the terminal icon in menu bar
-5. **Auto-Start**: Run `./scripts/install-autostart.sh` to start automatically on login
-6. **Use**: Try `Cmd+Ctrl+Left/Right` to tile windows
+### Method 1: Pre-built Binary (Recommended)
 
-**Alternative**: Install with Homebrew: `brew tap sunnybharne/tap && brew install macdwm` (requires GitHub access)
+1. **Download the binary:**
+   - Go to [Releases](https://github.com/sunnybharne/macdwm/releases)
+   - Download the latest `macdwm` binary
+   - Save it to your Downloads folder
+
+2. **Make it executable:**
+   ```bash
+   cd ~/Downloads
+   chmod +x macdwm
+   ```
+
+3. **Grant Accessibility permissions:**
+   - Open **System Settings** (Apple menu → System Settings)
+   - Go to **Privacy & Security** → **Accessibility**
+   - Click the **+** button
+   - Navigate to your Downloads folder and select **macdwm**
+   - Make sure the toggle is **enabled** (green)
+
+4. **Run macdwm:**
+   ```bash
+   ./macdwm
+   ```
+   - Look for a terminal icon in your menu bar
+   - If you see it, macdwm is running!
+
+5. **Set up auto-start (optional):**
+   ```bash
+   # Clone the repository first
+   git clone https://github.com/sunnybharne/macdwm.git
+   cd macdwm
+   
+   # Set up auto-start
+   ./scripts/install-autostart.sh
+   ```
+
+6. **Test it:**
+   - Click on any window to focus it
+   - Press `Cmd+Ctrl+Left` - the window should tile to the left half
+   - Press `Cmd+Ctrl+Right` - the window should tile to the right half
+
+### Method 2: Homebrew (Alternative)
+
+```bash
+brew tap sunnybharne/tap
+brew install macdwm
+```
+
+**Note**: This requires GitHub access. If your company restricts GitHub, use Method 1 instead.
 
 ## Hotkeys
 
