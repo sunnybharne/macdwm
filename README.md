@@ -1,61 +1,13 @@
 # macdwm
 
-A minimal macOS tiling window manager inspired by dwm (Dynamic Window Manager).
-
-[![Build Status](https://github.com/sunnybharne/macdwm/workflows/CI/badge.svg)](https://github.com/sunnybharne/macdwm/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![macOS](https://img.shields.io/badge/macOS-13.0+-blue.svg)](https://www.apple.com/macos/)
+A minimal macOS tiling window manager inspired by dwm. Personal use only.
 
 ## Features
 
-- **Tiling Windows**: Tile focused windows to left/right halves
-- **App Launcher**: Quick app switching with customizable hotkeys
-- **Menu Bar Control**: Visual status indicator with toggle functionality
-- **Lightweight**: Minimal resource usage, no system modifications
-- **Accessibility-Based**: Uses macOS Accessibility APIs
-
-## Quick Start
-
-### Method 1: Pre-built Binary (Recommended)
-
-1. **Download the binary:**
-   - Go to [Releases](https://github.com/sunnybharne/macdwm/releases)
-   - Download the latest `macdwm` binary
-   - Save it to your Downloads folder
-
-2. **Make it executable:**
-   ```bash
-   cd ~/Downloads
-   chmod +x macdwm
-   ```
-
-3. **Grant Accessibility permissions:**
-   - Open **System Settings** (Apple menu → System Settings)
-   - Go to **Privacy & Security** → **Accessibility**
-   - Click the **+** button
-   - Navigate to your Downloads folder and select **macdwm**
-   - Make sure the toggle is **enabled** (green)
-
-4. **Run macdwm:**
-   ```bash
-   ./macdwm
-   ```
-   - Look for a terminal icon in your menu bar
-   - If you see it, macdwm is running!
-
-5. **Test it:**
-   - Click on any window to focus it
-   - Press `Option+Ctrl+Left` - the window should tile to the left half
-   - Press `Option+Ctrl+Right` - the window should tile to the right half
-
-### Method 2: Homebrew (Alternative)
-
-```bash
-brew tap sunnybharne/tap
-brew install macdwm
-```
-
-**Note**: This requires GitHub access. If your company restricts GitHub, use Method 1 instead.
+- **Window tiling**: `Option+Ctrl+Left/Right` to tile windows
+- **App launcher**: `Option+1-5` to switch between applications
+- **Menu bar indicator**: Shows which app you're currently focused on
+- **Lightweight**: Uses minimal system resources
 
 ## Hotkeys
 
@@ -71,48 +23,97 @@ brew install macdwm
 
 ## Installation
 
-### Pre-built Binary
+### Step 1: Clone and Build
 ```bash
-# Download from releases page
-chmod +x macdwm
-./macdwm
-```
-an
-### Build from Source
-```bash
+# Clone the repository
 git clone https://github.com/sunnybharne/macdwm.git
 cd macdwm
-swift build --configuration release
-.build/release/macdwm
+
+# Build the application
+swift build --configuration release --disable-sandbox
 ```
+
+### Step 2: Install System-Wide
+```bash
+# Copy to system location (requires password)
+sudo cp .build/release/macdwm /usr/local/bin/macdwm
+```
+
+### Step 3: Grant Accessibility Permissions
+**This step is required for macdwm to work!**
+
+1. **Open System Settings** (click the Apple menu → System Settings)
+2. **Go to Privacy & Security** → **Accessibility**
+3. **Click the + button** (plus icon)
+4. **Navigate to and select**: `/usr/local/bin/macdwm`
+5. **Make sure the toggle is enabled** (should be green/checked)
+
+### Step 4: Run macdwm
+```bash
+# Start macdwm
+/usr/local/bin/macdwm
+```
+
+**You should see a terminal icon in your menu bar when it's running!**
+
+### Step 5: Test It Works
+1. **Click on any window** to focus it (like Finder, Safari, etc.)
+2. **Press `Option+Ctrl+Left`** - the window should tile to the left half
+3. **Press `Option+Ctrl+Right`** - the window should tile to the right half
+
+If the window tiles, congratulations! macdwm is working.
+
+## Usage
+
+- Look for the terminal icon in your menu bar
+- Click the icon to access settings and quit options
+- Use the hotkeys to tile windows and launch applications
+- The app number (1-5) will show in the menu bar when using app launcher hotkeys
 
 ## Requirements
 
 - macOS 13.0 (Ventura) or later
-- Accessibility permissions
 - Swift 6.1+ (for building from source)
+- Accessibility permissions (required for window management)
 
-## Documentation
+## Building from Source
 
-- 📖 [Full Documentation](https://sunnybharne.github.io/macdwm/)
-- 🚀 [Installation Guide](https://sunnybharne.github.io/macdwm/installation/)
-- 📋 [Release Notes](https://sunnybharne.github.io/macdwm/releases/)
-- 🤝 [Contributing](https://sunnybharne.github.io/macdwm/contributing/)
+```bash
+git clone https://github.com/sunnybharne/macdwm.git
+cd macdwm
+swift build --configuration release --disable-sandbox
+```
 
-## Philosophy
+## Stopping macdwm
 
-macdwm brings the efficiency and keyboard-driven workflow of dwm to macOS, while respecting the platform's design principles. It provides essential tiling functionality without the complexity of full window manager replacement.
+- Use the menu bar icon → Quit
+- Or run: `pkill -f macdwm`
 
-## Contributing
+## Troubleshooting
 
-Contributions welcome! Please see our [Contributing Guide](https://sunnybharne.github.io/macdwm/contributing/) for details.
+### "macdwm is already running. Exiting."
+This means another instance is running. Stop it first:
+```bash
+pkill -f macdwm
+```
 
-## License
+### No menu bar icon visible
+1. **Check if it's running**: `ps aux | grep macdwm`
+2. **Check logs**: `tail -10 /tmp/macdwm.log`
+3. **Most likely cause**: Missing Accessibility permissions
 
-MIT License - see [LICENSE](LICENSE) for details.
+### Hotkeys not working
+1. **Grant Accessibility permissions** (Step 3 above)
+2. **Make sure the window is focused** before using tiling hotkeys
+3. **Check for conflicts** in System Settings → Keyboard → Shortcuts
 
-## Acknowledgments
+### "Failed to create event tap"
+This means Accessibility permissions are not granted. Follow Step 3 above carefully.
 
-- Inspired by [dwm](https://dwm.suckless.org/) - Dynamic Window Manager
-- Built with Swift and macOS Accessibility APIs
-- Icons from SF Symbols
+### App launcher not working
+Make sure the applications are installed in the expected locations:
+- Firefox: Should be in Applications folder
+- iTerm: Should be in Applications folder  
+- Cursor: Should be in Applications folder
+- VS Code: Should be in Applications folder
+- Teams: Should be in Applications folder
