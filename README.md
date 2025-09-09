@@ -55,8 +55,8 @@ A minimal macOS tiling window manager inspired by dwm (Dynamic Window Manager).
 
 6. **Test it:**
    - Click on any window to focus it
-   - Press `Cmd+Ctrl+Left` - the window should tile to the left half
-   - Press `Cmd+Ctrl+Right` - the window should tile to the right half
+   - Press `Option+Ctrl+Left` - the window should tile to the left half
+   - Press `Option+Ctrl+Right` - the window should tile to the right half
 
 ### Method 2: Homebrew (Alternative)
 
@@ -71,13 +71,13 @@ brew install macdwm
 
 | Hotkey | Action |
 |--------|--------|
-| `Cmd+Ctrl+Left` | Tile window to left half |
-| `Cmd+Ctrl+Right` | Tile window to right half |
-| `Cmd+1` | Activate Firefox |
-| `Cmd+2` | Activate iTerm |
-| `Cmd+3` | Activate Cursor |
-| `Cmd+4` | Activate Visual Studio Code |
-| `Cmd+5` | Activate Microsoft Teams |
+| `Option+Ctrl+Left` | Tile window to left half |
+| `Option+Ctrl+Right` | Tile window to right half |
+| `Option+1` | Activate Firefox |
+| `Option+2` | Activate iTerm |
+| `Option+3` | Activate Cursor |
+| `Option+4` | Activate Visual Studio Code |
+| `Option+5` | Activate Microsoft Teams |
 
 ## Installation
 

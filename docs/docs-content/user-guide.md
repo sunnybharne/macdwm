@@ -52,8 +52,8 @@ The menu bar icon gives you access to all macdwm features:
 ### Basic Tiling
 macdwm provides two main tiling operations:
 
-- **Left Half**: `Cmd+Ctrl+Left` - Tiles the focused window to the left half of the screen
-- **Right Half**: `Cmd+Ctrl+Right` - Tiles the focused window to the right half of the screen
+- **Left Half**: `Option+Ctrl+Left` - Tiles the focused window to the left half of the screen
+- **Right Half**: `Option+Ctrl+Right` - Tiles the focused window to the right half of the screen
 
 ### How It Works
 1. Focus any window (click on it or use Cmd+Tab)
@@ -75,11 +75,11 @@ Use the app launcher hotkeys to instantly switch to or launch applications:
 
 | Hotkey | Application | Bundle ID/Path |
 |--------|-------------|----------------|
-| `Cmd+1` | Firefox | `org.mozilla.firefox` |
-| `Cmd+2` | iTerm | `com.googlecode.iterm2` |
-| `Cmd+3` | Cursor | `/Applications/Cursor.app` |
-| `Cmd+4` | VS Code | `/Applications/Visual Studio Code.app` |
-| `Cmd+5` | Teams | `com.microsoft.teams2` |
+| `Option+1` | Firefox | `org.mozilla.firefox` |
+| `Option+2` | iTerm | `com.googlecode.iterm2` |
+| `Option+3` | Cursor | `/Applications/Cursor.app` |
+| `Option+4` | VS Code | `/Applications/Visual Studio Code.app` |
+| `Option+5` | Teams | `com.microsoft.teams2` |
 
 ### How App Launcher Works
 1. Press the hotkey for your desired application
@@ -93,16 +93,16 @@ Use the app launcher hotkeys to instantly switch to or launch applications:
 You can combine tiling and app launching for efficient workflows:
 
 1. **Split Screen Coding**: 
-   - Use `Cmd+3` to open Cursor
-   - Use `Cmd+Ctrl+Left` to tile it left
-   - Use `Cmd+2` to open iTerm
-   - Use `Cmd+Ctrl+Right` to tile it right
+   - Use `Option+3` to open Cursor
+   - Use `Option+Ctrl+Left` to tile it left
+   - Use `Option+2` to open iTerm
+   - Use `Option+Ctrl+Right` to tile it right
 
 2. **Documentation + Browser**:
-   - Use `Cmd+1` to open Firefox
-   - Use `Cmd+Ctrl+Left` to tile it left
+   - Use `Option+1` to open Firefox
+   - Use `Option+Ctrl+Left` to tile it left
    - Open documentation in another app
-   - Use `Cmd+Ctrl+Right` to tile it right
+   - Use `Option+Ctrl+Right` to tile it right
 
 ### Window Focus Management
 - Always ensure the target window is focused before tiling

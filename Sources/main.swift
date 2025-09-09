@@ -70,8 +70,8 @@ final class KeyEventTap {
         let isAlt = flags.contains(.maskAlternate)
         let isCtrl = flags.contains(.maskControl)
         let keycode = event.getIntegerValueField(.keyboardEventKeycode)
-        // Cmd+1: activate Firefox
-        if isCmd && !isAlt && keycode == 18 { // 18 = '1'
+        // Option+1: activate Firefox
+        if isAlt && !isCmd && keycode == 18 { // 18 = '1'
             if let appURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "org.mozilla.firefox") {
                 let config = NSWorkspace.OpenConfiguration()
                 NSWorkspace.shared.openApplication(at: appURL, configuration: config) { _, _ in }
@@ -79,8 +79,8 @@ final class KeyEventTap {
             onAppNumberChange(1)
             return nil
         }
-        // Cmd+2: activate iTerm
-        if isCmd && !isAlt && keycode == 19 { // 19 = '2'
+        // Option+2: activate iTerm
+        if isAlt && !isCmd && keycode == 19 { // 19 = '2'
             if let appURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.googlecode.iterm2") {
                 let config = NSWorkspace.OpenConfiguration()
                 NSWorkspace.shared.openApplication(at: appURL, configuration: config) { _, _ in }
@@ -88,24 +88,24 @@ final class KeyEventTap {
             onAppNumberChange(2)
             return nil
         }
-        // Cmd+3: activate Cursor
-        if isCmd && !isAlt && keycode == 20 { // 20 = '3'
+        // Option+3: activate Cursor
+        if isAlt && !isCmd && keycode == 20 { // 20 = '3'
             let appURL = URL(fileURLWithPath: "/Applications/Cursor.app")
             let config = NSWorkspace.OpenConfiguration()
             NSWorkspace.shared.openApplication(at: appURL, configuration: config) { _, _ in }
             onAppNumberChange(3)
             return nil
         }
-        // Cmd+4: activate Visual Studio Code
-        if isCmd && !isAlt && keycode == 21 { // 21 = '4'
+        // Option+4: activate Visual Studio Code
+        if isAlt && !isCmd && keycode == 21 { // 21 = '4'
             let appURL = URL(fileURLWithPath: "/Applications/Visual Studio Code.app")
             let config = NSWorkspace.OpenConfiguration()
             NSWorkspace.shared.openApplication(at: appURL, configuration: config) { _, _ in }
             onAppNumberChange(4)
             return nil
         }
-        // Cmd+5: activate Microsoft Teams
-        if isCmd && !isAlt && keycode == 23 { // 23 = '5'
+        // Option+5: activate Microsoft Teams
+        if isAlt && !isCmd && keycode == 23 { // 23 = '5'
             if let appURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.microsoft.teams2") ??
                 NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.microsoft.teams") {
                 let config = NSWorkspace.OpenConfiguration()
@@ -114,7 +114,7 @@ final class KeyEventTap {
             onAppNumberChange(5)
             return nil
         }
-        if isCmd && (isAlt || isCtrl) {
+        if isAlt && isCtrl {
             switch keycode {
             case 123: // left arrow
                 windowManager.tileFocusedWindowLeftHalf()
@@ -269,7 +269,7 @@ final class AppController: NSObject, NSApplicationDelegate {
     }
 
     @objc private func showSettings() {
-        let info = "Hotkeys:\n- Cmd+Ctrl+Left/Right: tile left/right\n- Cmd+1: Firefox\n- Cmd+2: iTerm\n- Cmd+3: Cursor\n- Cmd+4: VS Code\n- Cmd+5: Teams"
+        let info = "Hotkeys:\n- Option+Ctrl+Left/Right: tile left/right\n- Option+1: Firefox\n- Option+2: iTerm\n- Option+3: Cursor\n- Option+4: VS Code\n- Option+5: Teams"
         let alert = NSAlert()
         alert.messageText = "macdwm Settings"
         alert.informativeText = info
