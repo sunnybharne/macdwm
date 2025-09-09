@@ -2,7 +2,7 @@
 
 A minimal macOS tiling window manager inspired by dwm (Dynamic Window Manager).
 
-[![Build Status](https://github.com/yourusername/macdwm/workflows/CI/badge.svg)](https://github.com/yourusername/macdwm/actions)
+[![Build Status](https://github.com/sunnybharne/macdwm/workflows/CI/badge.svg)](https://github.com/sunnybharne/macdwm/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![macOS](https://img.shields.io/badge/macOS-13.0+-blue.svg)](https://www.apple.com/macos/)
 
@@ -16,7 +16,7 @@ A minimal macOS tiling window manager inspired by dwm (Dynamic Window Manager).
 
 ## Quick Start
 
-1. **Download** from [Releases](https://github.com/yourusername/macdwm/releases)
+1. **Download** from [Releases](https://github.com/sunnybharne/macdwm/releases)
 2. **Grant Permissions**: Enable Accessibility in System Settings
 3. **Run**: Execute the binary and look for the terminal icon in menu bar
 4. **Use**: Try `Cmd+Ctrl+Left/Right` to tile windows
@@ -44,7 +44,7 @@ chmod +x macdwm
 
 ### Build from Source
 ```bash
-git clone https://github.com/yourusername/macdwm.git
+git clone https://github.com/sunnybharne/macdwm.git
 cd macdwm
 swift build --configuration release
 .build/release/macdwm
@@ -58,10 +58,10 @@ swift build --configuration release
 
 ## Documentation
 
-- 📖 [Full Documentation](https://yourusername.github.io/macdwm/)
-- 🚀 [Installation Guide](https://yourusername.github.io/macdwm/docs/v1.0.0/installation/)
-- 📋 [Release Notes](https://yourusername.github.io/macdwm/releases/)
-- 🤝 [Contributing](https://yourusername.github.io/macdwm/contributing/)
+- 📖 [Full Documentation](https://sunnybharne.github.io/macdwm/)
+- 🚀 [Installation Guide](https://sunnybharne.github.io/macdwm/installation/)
+- 📋 [Release Notes](https://sunnybharne.github.io/macdwm/releases/)
+- 🤝 [Contributing](https://sunnybharne.github.io/macdwm/contributing/)
 
 ## Philosophy
 
@@ -69,7 +69,7 @@ macdwm brings the efficiency and keyboard-driven workflow of dwm to macOS, while
 
 ## Contributing
 
-Contributions welcome! Please see our [Contributing Guide](https://yourusername.github.io/macdwm/contributing/) for details.
+Contributions welcome! Please see our [Contributing Guide](https://sunnybharne.github.io/macdwm/contributing/) for details.
 
 ## License
 
